@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>自分の言葉で学ぶ英語日記</title>
+    <style>
+        body {
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: sans-serif;
+            line-height: 1.8;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            font: inherit;
+            padding: 12px;
+        }
+        button { padding: 10px 20px; font: inherit; }
+        article {
+            border-bottom: 1px solid #ddd;
+            padding: 16px 0;
+        }
+        article p { white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>自分の言葉で学ぶ英語日記</h1>
+    <p>今日の出来事や考えを、日本語で書いてみよう。</p>
+
+    <label for="diary">今日の日記</label>
+    <textarea id="diary" rows="8" maxlength="10000"></textarea>
+    <button id="save" type="button">日記を保存</button>
+    <p id="message" role="status"></p>
+
+    <h2>保存した日記</h2>
+
+    <label for="reading-speed">読み上げ速度</label>
+    <select id="reading-speed">
+        <option value="0.6">0.6倍</option>
+        <option value="0.7">0.7倍</option>
+        <option value="0.8">0.8倍</option>
+        <option value="0.9">0.9倍</option>
+        <option value="1.0" selected>1.0倍（標準）</option>
+        <option value="1.1">1.1倍</option>
+        <option value="1.2">1.2倍</option>
+        <option value="1.3">1.3倍</option>
+        <option value="1.4">1.4倍</option>
+        <option value="1.5">1.5倍</option>
+    </select>
+    <div id="history"></div>
+
+    <h2>保存した表現</h2>
+    <p id="expression-message" role="status"></p>
+    <div id="expressions"></div>
+
+    <script src="/static/app.js" defer></script>
+</body>
+</html>

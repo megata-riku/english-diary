@@ -1,0 +1,14 @@
+# Pythonの実行環境・キャッシュ
+.venv/
+__pycache__/
+
+# APIキーなどの秘密情報
+.env
+.env.*
+!.env.example
+
+# 個人の日記データ
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
